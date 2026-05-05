@@ -1,3 +1,4 @@
+import './styles.css';
 import { Browser } from '@capacitor/browser';
 
 const menuToggle = document.getElementById('menuToggle');
