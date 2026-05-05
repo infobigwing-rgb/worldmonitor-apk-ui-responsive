@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">WorldMonitor APK UI</string>
+    <string name="title_activity_main">WorldMonitor APK UI</string>
+    <string name="package_name">com.worldmonitor.apkui</string>
+    <string name="custom_url_scheme">com.worldmonitor.apkui</string>
+</resources>

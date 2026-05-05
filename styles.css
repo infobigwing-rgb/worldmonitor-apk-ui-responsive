@@ -49,12 +49,17 @@ body {
   cursor: pointer;
 }
 
-.install-button {
+.install-button,
+.open-app-button {
   min-width: 110px;
   width: auto;
   padding: 0 16px;
   font-size: 0.95rem;
   height: 44px;
+}
+
+.open-app-button {
+  margin-top: 16px;
 }
 
 h1,

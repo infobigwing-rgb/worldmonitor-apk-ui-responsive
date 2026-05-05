@@ -1,6 +1,11 @@
+import { Browser } from '@capacitor/browser';
+
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
+const openWorldMonitorButton = document.getElementById('openWorldMonitor');
 let deferredPrompt = null;
+
+const WORLD_MONITOR_URL = 'https://worldmonitor.app/';
 
 menuToggle.addEventListener('click', () => {
   sidebar.classList.toggle('open');
@@ -13,6 +18,12 @@ window.addEventListener('resize', () => {
     document.body.classList.remove('has-sidebar-visible');
   }
 });
+
+if (openWorldMonitorButton) {
+  openWorldMonitorButton.addEventListener('click', async () => {
+    await Browser.open({ url: WORLD_MONITOR_URL });
+  });
+}
 
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault();

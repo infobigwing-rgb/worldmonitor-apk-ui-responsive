@@ -1,0 +1,6 @@
+{
+  "appId": "com.worldmonitor.apkui",
+  "appName": "WorldMonitor APK UI",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

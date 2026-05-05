@@ -7,6 +7,15 @@ node_modules/
 /dist
 /build
 
+# Capacitor / Android native build artifacts
+android/.gradle/
+android/app/build/
+android/gradle/
+android/capacitor.config.json
+android/gradle.properties
+android/local.properties
+android/**/build/
+
 # Ignore logs
 npm-debug.log*
 yarn-debug.log*

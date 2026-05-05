@@ -46,14 +46,24 @@ This project is scaffolded as a mobile-first PWA so it can be shipped as a web a
    ```bash
    npx cap init com.worldmonitor.apkui "WorldMonitor APK UI" --web-dir=dist
    ```
-3. Build the web app and sync assets:
+3. Add the Android platform:
+   ```bash
+   npx cap add android
+   ```
+4. Build the web app and sync assets:
    ```bash
    npm run build && npm run cap:sync
    ```
-4. Open the Android project in Android Studio:
+5. Open the Android project in Android Studio:
    ```bash
    npm run cap:open
    ```
+
+### Loading WorldMonitor.app
+
+The app includes a direct link for opening `https://worldmonitor.app/`.
+- On the web, this will open in a new browser tab.
+- In a Capacitor-built APK, it will open inside the native browser experience.
 
 ### Build and deploy
 
