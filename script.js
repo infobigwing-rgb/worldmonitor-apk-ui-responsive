@@ -12,3 +12,14 @@ window.addEventListener('resize', () => {
     document.body.classList.remove('has-sidebar-visible');
   }
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      await navigator.serviceWorker.register('/service-worker.js');
+      console.log('Service worker registered successfully');
+    } catch (error) {
+      console.warn('Service worker registration failed', error);
+    }
+  });
+}
