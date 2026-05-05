@@ -36,11 +36,30 @@ A starter repository for building responsive UI prototypes aimed at APK-style mo
 
 This project is scaffolded as a mobile-first PWA so it can be shipped as a web app or wrapped into an APK using tools like Capacitor, PWABuilder, or Android WebView.
 
-### Wrap as an Android APK
+### Wrap as an Android APK with Capacitor
 
-- Use `npm run build` to generate the static app
-- Point your native wrapper to the `dist/` output
-- For Capacitor, install `@capacitor/cli`, `@capacitor/core`, and `@capacitor/android` and run `npx cap add android`
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Initialize Capacitor if needed:
+   ```bash
+   npx cap init com.worldmonitor.apkui "WorldMonitor APK UI" --web-dir=dist
+   ```
+3. Build the web app and sync assets:
+   ```bash
+   npm run build && npm run cap:sync
+   ```
+4. Open the Android project in Android Studio:
+   ```bash
+   npm run cap:open
+   ```
+
+### Build and deploy
+
+- Use `npm run build` to generate the production-ready static app in `dist/`
+- Use `npm run cap:sync` after building to copy assets into the native Android wrapper
+- Use `npm run cap:open` to launch Android Studio for APK generation
 
 ## Project goals
 

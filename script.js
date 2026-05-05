@@ -1,5 +1,6 @@
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
+let deferredPrompt = null;
 
 menuToggle.addEventListener('click', () => {
   sidebar.classList.toggle('open');
@@ -11,6 +12,29 @@ window.addEventListener('resize', () => {
     sidebar.classList.remove('open');
     document.body.classList.remove('has-sidebar-visible');
   }
+});
+
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault();
+  deferredPrompt = event;
+  const installButton = document.createElement('button');
+  installButton.className = 'install-button';
+  installButton.textContent = 'Install app';
+  installButton.addEventListener('click', async () => {
+    if (!deferredPrompt) {
+      return;
+    }
+    deferredPrompt.prompt();
+    const choiceResult = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    installButton.remove();
+    console.log('Install prompt choice:', choiceResult.outcome);
+  });
+  document.querySelector('.topbar').appendChild(installButton);
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('App successfully installed');
 });
 
 if ('serviceWorker' in navigator) {

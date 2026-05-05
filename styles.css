@@ -36,7 +36,8 @@ body {
   backdrop-filter: blur(12px);
 }
 
-.menu-button {
+.menu-button,
+.install-button {
   appearance: none;
   border: none;
   background: rgba(94, 234, 212, 0.12);
@@ -46,6 +47,14 @@ body {
   height: 48px;
   border-radius: 16px;
   cursor: pointer;
+}
+
+.install-button {
+  min-width: 110px;
+  width: auto;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  height: 44px;
 }
 
 h1,
