@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APK UI Responsiveness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button id="menuToggle" class="menu-button" aria-label="Open navigation">
+        ☰
+      </button>
+      <div>
+        <h1>WorldMonitor</h1>
+        <p>Responsive APK UI sample</p>
+      </div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <section class="hero">
+        <h2>Adaptive Mobile Layout</h2>
+        <p>This prototype emphasizes responsive spacing, typography, and navigation for an APK-like user interface.</p>
+      </section>
+
+      <section class="card-grid">
+        <article class="card" id="dashboard">
+          <h3>Live Status</h3>
+          <p>Monitor key metrics from globally distributed sensors in a compact mobile-friendly view.</p>
+        </article>
+        <article class="card" id="alerts">
+          <h3>Alert Feed</h3>
+          <p>View urgent event notifications with badge counts and prioritized visual hierarchy.</p>
+        </article>
+        <article class="card" id="analytics">
+          <h3>Analytics</h3>
+          <p>Responsive charts and summaries adapt to portrait and landscape screens.</p>
+        </article>
+        <article class="card" id="settings">
+          <h3>Settings</h3>
+          <p>Control themes, refresh intervals, and display density for mobile users.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
